@@ -1,0 +1,19 @@
+[package]
+name = "multiroblox"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+getch = "0.3.1"
+winapi = "0.3.9"
+
+[target.'cfg(windows)'.dependencies.windows]
+version = "0.48.0"
+features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_System_Threading",
+    "Win32_System_WindowsProgramming",
+]
